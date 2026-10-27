@@ -40,7 +40,7 @@ async function startServer() {
       console.log("MongoDB Atlas connected successfully");
     } catch (error) {
       console.error("MongoDB connection failed:", error.message);
-      process.exit(1);
+      // Don't exit process so server remains available for health checks
     }
   } else {
     console.log("MongoDB URI not configured yet");
